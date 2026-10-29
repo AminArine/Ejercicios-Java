@@ -1,90 +1,159 @@
-package basic.c05_structures;
 
-/*
-Clase 44 - Ejercicios: Estructuras
-Vídeo: https://youtu.be/JOAqpdM36wI?t=15680
-*/
-
-import java.sql.SQLSyntaxErrorException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class StructuresExercises {
-
+public class Estrucuctura {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        int opcion ,tamano ,tam;
-        int [] caja;
-        int [] cajon ;
-        System.out.println("----- MENÚ -----"
-        +"\t\n 1. Crea un Array con 5 valores e imprime su longitud."
-        +"\t\n 2. Modifica uno de los valores del Array e imprime el valor del índice antes y después de modificarlo."
-        +"\t\n 3. Crea un ArrayList vacío."
-        +"\t\n 4. Añade 4 valores al ArrayList y elimina uno a continuación."
-        +"\t\n 5. Crea un HashSet con 2 valores diferentes."
-        +"\t\n 6. Añade un nuevo valor repetido y otro sin repetir al HashSet."
-        +"\t\n 7. Elimina uno de los elementos del HashSet."
-        +"\t\n 8. Crea un HashMap donde la clave sea un nombre y el valor el número de teléfono. Añade tres contactos."
-        +"\t\n 9. Modifica uno de los contactos y elimina otro."
-        +"\t\n 10. Dado un Array, transfórmalo en un ArrayList, a continuación en un HashSet y finalmente en un HashMap con clave y valor iguales."
+
+        Scanner sc = new Scanner(System.in);
+        byte opcion;
+
+        System.out.println("-----MENÚ-------"
+                + "\n1. Crea un Array con 5 valores e imprime su longitud."
+                + "\n2. Modifica un valor e imprime el antes y el después."
+                + "\n3. Crea un ArrayList vacío."
+                + "\n4. Añade 4 valores al ArrayList y elimina uno."
+                + "\n5. Crea un HashSet con 2 valores diferentes."
+                + "\n6. Añade un valor repetido y otro nuevo al HashSet."
+                + "\n7. Elimina un elemento del HashSet."
+                + "\n8. Crea un HashMap con tres contactos."
+                + "\n9. Modifica un contacto y elimina otro."
+                + "\n10. Convierte un Array en ArrayList, HashSet y HashMap."
         );
-         System.out.println("INTRODUCE UNA OPCIÓN :");
-         opcion=sc.nextInt();
-         switch(opcion){
-             case 1:
-                 System.out.println("Introduce el tamaño del array .....");
-                 tamano=sc.nextInt();
-                 caja= new int [tamano];
-                 for(int i=0;i<tamano;i++) {
-                     caja [i] = (int) (Math.random() * 10);
-                     System.out.print("-"+caja[i]);
-                 }
-                  System.out.println("El tamaño del array es de ...."+caja.length);
 
-                 break;
-             case 2:
-                 System.out.println("Introduce el tamaño del array .....");
-                 tam=sc.nextInt();
-                 cajon= new int [tam];
-                 for(int i=0;i<cajon.length;i++) {
-                     cajon [i] = (int) (Math.random() * 10);
-                 }
-                 System.out.println("Valor antes de cambiar (cajon [i])");
-                 System.out.println(cajon [2]);
-                 cajon [2]=8;
-                 System.out.println("Valor despues de pegarle un cambio :"+cajon [2]);
-                 break;
-             case 3:
-                 var  lista =new ArrayList<Integer>();
-                  System.out.println("El tamaño de esta lista es de ..."+lista.size());
-                 break;
-             case 4:
-                 var  lista1 =new ArrayList<Integer>();
-                 lista1.add(7);
-                 lista1.add(8);
-                 lista1.add(5);
-                 lista1.add(6);
-                 lista1.remove(3);
-                 for(int i=0;i<lista1.size();i++) {
-                     System.out.println(lista1.get(i));
-                 }
+        System.out.println("Introduce una opción: ");
+        opcion = sc.nextByte();
 
-                 break;
-             case 5:case 6:
-                 var set = new HashSet<Integer>();
-                 set.add(2);
-                 set.add(8);
-                 break;
-             case 7:
-                 break;
-             case 8:
-                 break;
-             case 9:
-                 break;
-             case 10 :
-                 break;
-         }
+        switch (opcion) {
 
+            case 1:
+                int[] num = new int[5];
+
+                for (int i = 0; i < num.length; i++) {
+                    num[i] = (int) (Math.random() * 10);
+                    System.out.print(num[i] + " ");
+                }
+
+                System.out.println("\nSu longitud es " + num.length);
+                break;
+
+            case 2:
+                int[] numero = {5, 8, 3, 7, 9};
+
+                
+
+                System.out.println("Valor anterior: " + numero[numero.length]);
+
+                numero[2] = 2;
+
+                System.out.println("Valor nuevo: " + numero[numero.length]);
+                break;
+
+            case 3:
+                var caja = new ArrayList<Integer>();
+
+                System.out.println("Tamaño del ArrayList: " + caja.size());
+                break;
+
+            case 4:
+                var lista1 = new ArrayList<Integer>();
+
+                lista1.add(7);
+                lista1.add(8);
+                lista1.add(5);
+                lista1.add(6);
+
+                lista1.remove(3);
+
+                for (int i = 0; i < lista1.size(); i++) {
+                    System.out.println(lista1.get(i));
+                }
+                break;
+
+            case 5:
+                var set5 = new HashSet<Integer>();
+
+                set5.add(2);
+                set5.add(8);
+
+                System.out.println(set5);
+                break;
+
+            case 6:
+                var set6 = new HashSet<Integer>();
+
+                set6.add(2);
+                set6.add(8);
+                set6.add(2); // Repetido
+                set6.add(5); // Nuevo
+
+                System.out.println(set6);
+                break;
+
+            case 7:
+                var set7 = new HashSet<Integer>();
+
+                set7.add(2);
+                set7.add(8);
+                set7.add(5);
+
+                set7.remove(2);
+
+                System.out.println(set7);
+                break;
+
+            case 8:
+                HashMap<String, String> map = new HashMap<>();
+
+                map.put("Moha", "672546822");
+                map.put("Mama", "682532475");
+                map.put("Papa", "639546213");
+
+                System.out.println(map);
+                break;
+
+            case 9:
+                HashMap<String, String> contactos = new HashMap<>();
+
+                contactos.put("Moha", "672546822");
+                contactos.put("Mama", "682532475");
+                contactos.put("Papa", "639546213");
+
+                contactos.replace("Moha", "521436251");
+                contactos.remove("Mama");
+
+                System.out.println(contactos);
+                break;
+
+            case 10:
+                int[] numeros = {5, 12, 8, 20, 3};
+
+                ArrayList<Integer> liston = new ArrayList<>();
+                HashSet<Integer> seton = new HashSet<>();
+                HashMap<Integer, Integer> maps = new HashMap<>();
+
+                for (int i = 0; i < numeros.length; i++) {
+                    liston.add(numeros[i]);
+                }
+
+                for (int i = 0; i < liston.size(); i++) {
+                    seton.add(liston.get(i));
+                    maps.put(liston.get(i), liston.get(i));
+                }
+
+                
+
+                System.out.println("ArrayList: " + liston);
+                System.out.println("HashSet: " + seton);
+                System.out.println("HashMap: " + maps);
+                break;
+
+            default:
+                System.err.println("Opción incorrecta.");
+        }
+
+        sc.close();
     }
 }
