@@ -68,7 +68,7 @@ public class EjerciciosFunciones2 {
                 int tamano = sc.nextInt();
                 // 8. Crea un método que reciba un array de enteros, calcula su media y lo retorna."
 
-                relleno(array, tamano);
+                relleno(tamano);
                 mediaarray(array);
                 break;
             case 9:
@@ -129,7 +129,8 @@ public class EjerciciosFunciones2 {
 
     }
 
-    public static int[] relleno(int[] array, int tamano) {
+    public static int[] relleno(int tamano) {
+        int [] array=new int [tamano];
         for (int j = 0; j < tamano; j++) {
             array[j] = (int) Math.random() * 10;
         }
