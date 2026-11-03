@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="trimestre-html">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/trimestre-html/semana-02.zip.zip!/" />
+      <root url="jar://$PROJECT_DIR$/trimestre-html/semana-03.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
