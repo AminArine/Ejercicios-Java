@@ -28,3 +28,4 @@ public class Calificaciones {
             }
 
         } while (nota != 10);
+    }}
