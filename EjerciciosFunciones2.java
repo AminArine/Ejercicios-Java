@@ -26,7 +26,6 @@ public class EjerciciosFunciones2 {
         int opcion, numero, numero1, num1, num2;
         byte edad;
         Scanner sc = new Scanner(System.in);
-        int[] array;
         System.out.println("Introduce la opcion elegida ....");
         opcion = sc.nextInt();
         switch (opcion) {
@@ -67,9 +66,12 @@ public class EjerciciosFunciones2 {
                 System.out.println("Introduce el tamaño del array ....");
                 int tamano = sc.nextInt();
                 // 8. Crea un método que reciba un array de enteros, calcula su media y lo retorna."
-
+                System.out.println("Aqui te dejo el array generado ....");
                 relleno(tamano);
-                mediaarray(array);
+                System.out.println("La media del array es ...." + mediaarray(relleno(tamano)));
+                // System.out.println(Arrays.toString(array));
+
+                // mediaarray(array);
                 break;
             case 9:
                 System.out.println("Que factorial quieres saber ....");
@@ -129,13 +131,14 @@ public class EjerciciosFunciones2 {
 
     }
 
-    public static int[] relleno(int tamano) {
-        int [] array=new int [tamano];
-        for (int j = 0; j < tamano; j++) {
-            array[j] = (int) Math.random() * 10;
-        }
-        return array;
+   public static int[] relleno(int tamano) {
+    int[] array = new int[tamano];
+    for (int j = 0; j < tamano; j++) {
+        array[j] = (int) (Math.random() * 10);  // números del 0 al 9
+        System.out.println(array[j]);
     }
+    return array;
+ }
 
     public static int factorial(int num) {
         int fact=0 ,contador=0;

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicación del Error Semántico</title>
+</head>
+<body>
+    <!-- El error semántico se debe a que se ha incluido un elemento <main> dentro de otro <main>.
+         Este elemento debe identificar el contenido principal de la página y no puede contener otro elemento <main>.
+         Como consecuencia la estructura del documento no expresa correctamente la organización semántica del contenido. -->
+    <main>
+        <main>
+            <h1>Contenido</h1>
+        </main>
+    </main>
+</body>
+</html>
