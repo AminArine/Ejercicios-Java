@@ -29,7 +29,8 @@ public class GestorTienda{
                 opcion=sc.nextByte();
                  System.out.println("Introduce cuantas unidades quieres : ");
                 unidades=sc.nextByte();
-                 case 1:
+                switch(opcion){
+                case 1:
                     System.out.println("Los teclados estan en 20 $$$");
                     teclados=unidades;
                     totalVentas += unidades * PRECIO_TECLADO;
@@ -46,7 +47,7 @@ public class GestorTienda{
                     break;
                 default:
                 System.err.println("ERRRRRRRRRRRRRORRRRRRRRRRRRRRRRRRRRRRRRRRRR");
-                
+                }
             case 2:
                 System.out.println("Ha comprado" +teclados+" de teclasos por " + PRECIO_TECLADO + " $$$");
                 System.out.println("ha comprado" +ratones+" de ratones por " + PRECIO_RATON + " $$$");

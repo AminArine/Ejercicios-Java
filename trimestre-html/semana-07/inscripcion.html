@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de inscripción</title>
+</head>
+<body>
+    <form action="/enviar" method="post">
+        <!--Crea inscripcion.html con un formulario de inscripción a una actividad extraescolar: nombre,
+        correo (marcado como required ), edad ( type="number" con min="12" y max="18" ), un grupo de
+        radio para elegir turno (mañana/tarde) y un checkbox de aceptación de condiciones. Agrupa los
+        campos en al menos dos fieldset distintos.-->
+        <fieldset>
+            <legend>Datos de contacto</legend>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" placeholder="Tu nombre"><br>
+                
+                <label for="edad">Edad</label>
+                <input type="number" name="edad" min="12" max="18"><br>
+                
+        </fieldset>
+        <fieldset>
+            <legend>Información de acceso</legend>
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required><br>
+                <label for="clave">Contraseña</label>
+                <input type="password" name="clave"><br>
+            
+        </fieldset>
+        <fieldset>
+            <legend>Turno</legend>
+                <input type="radio" id="turno-manana" name="turno" value="mañana">
+                <label for="turno-manana">Mañana</label>
+                <input type="radio" id="turno-tarde" name="turno" value="tarde">
+                <label for="turno-tarde">Tarde</label>
+        </fieldset>
+        <p>¿Aceptas las condiciones?</p>
+        <label for="acepto">Sí, acepto las condiciones</label>
+        <input type="checkbox" id="acepto" name="acepto" value="si">
+    </form>
+</body>
+</html>
