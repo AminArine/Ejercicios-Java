@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+ import java.util.ArrayList;
 public class EjerciciosFunciones2 {
     static void main(String[] args) {
         System.out.println("-----Menú-----"
@@ -79,6 +79,23 @@ public class EjerciciosFunciones2 {
                 factorial(num);
                 break;
             case 10:
+               
+
+                ArrayList<String> alumnos = new ArrayList<>();
+
+                alumnos.add("Mohamed");
+                alumnos.add("Antonio");
+                alumnos.add("Carlos");
+                alumnos.add("Javier");
+                alumnos.add("Lucía");
+                alumnos.add("María");
+                alumnos.add("Pedro");
+                alumnos.add("Sara");
+                alumnos.add("Daniel");
+                alumnos.add("Alejandro");
+
+                System.out.println(alumnos);
+    
                 break;
 
         }
@@ -131,7 +148,7 @@ public class EjerciciosFunciones2 {
 
     }
 
-   public static int[] relleno(int tamano) {
+    public static int[] relleno(int tamano) {
     int[] array = new int[tamano];
     for (int j = 0; j < tamano; j++) {
         array[j] = (int) (Math.random() * 10);  // números del 0 al 9
@@ -147,16 +164,13 @@ public class EjerciciosFunciones2 {
         } else if(num==1) {
             return 1;
         }else{
-            for (int j = num; j >0; j--) {
-                contador=num;
-                num *= (num - 1);
-                fact*=num;
-                contador--;
-
-            }
-            return fact;
-            //return num*factorial(num-1);
+            
+            return num*factorial(num-1);
         }
 
     }
-}
+    public static void consultor(ArrayList<String> alumnos){
+        for(String alumno : alumnos){
+            System.out.println(alumno);
+        }
+    }
