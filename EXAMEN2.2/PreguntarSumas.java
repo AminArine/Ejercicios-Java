@@ -29,7 +29,16 @@ public class PreguntarSumas {
     //Imprimios resultados por pantalla
         System.out.println("Numero de aciertos : "+aciertos);
         System.out.println("Numero de no  aciertos :"+errores);
-        
+        if (aciertos==sumas){
+        	System.out.println("¡ Enhorabuena ! Has acertado todas las sumas");
+        }
+        if (errores==sumas){
+        	System.out.println("¡ Vaya ! No has acertado ninguna suma");
+        }
+        if(aciertos > errores){
+        	System.out.println("¡ Vas regular! ");
+        }
+    
 
 
 
