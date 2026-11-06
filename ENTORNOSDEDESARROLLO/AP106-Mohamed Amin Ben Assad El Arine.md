@@ -223,3 +223,6 @@ En conclusión, no existe un lenguaje que sea el mejor en todos los aspectos. Ja
   3.15.2+1
 - Microsoft. Transpiling TypeScript. Documentación de TypeScript. 
   Visual Stud
+
+
+# Asegurandome de que git guarde est aversion 1
