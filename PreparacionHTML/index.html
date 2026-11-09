@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum de M.Amin</title>
+</head>
+<body>
+    <h1>Curriculum de M.Amin</h1>           
+     <h2>Curriculum de M.Amin</h2>  
+      <h3>Curriculum de M.Amin</h3>  
+       <h4>Curriculum de M.Amin</h4>  
+        <h5>Curriculum de M.Amin</h5>  
+            <h6>Curriculum de M.Amin</h6>
+            <p>Hola, soy M.Amin. Por aqui dejo mi curriculum en su version web</p>
+    
+    <!-- Aqui esta como se hace una separacion importante -->
+    <hr>
+    <!-- <br> ,me sirve para hacer un salto de linea -->
+    <p>Hola, soy M.Amin.<br> Por aqui dejo mi curriculum en su version web</p>
+
+    <hr>
+    <!-- <span> ,me sirve para hacer una marca dentro de un texto -->
+    <p>Hola, soy M.Amin. <span>Por aqui dejo mi curriculum en su version web</span></p>
+    <!-- <strong> ,me sirve para hacer un texto en negrita -->
+    <p>Hola, soy M.Amin. <strong>Por aqui dejo mi curriculum en su version web</strong></p>
+    <!-- <em> ,me sirve para hacer un texto en cursiva -->
+    <p>Hola, soy M.Amin. <em>Por aqui dejo mi curriculum en su version web</em></p>
+    <hr>
+    <!-- <a> ,me sirve para hacer un enlace -->
+    <p>Hola, soy M.Amin. <a href="https://es.linkedin.com/in/mohamed-benassad">Por aqui dejo mi curriculum en su version web</a></p>
+    <hr>
+    <!-- <img> ,me sirve para insertar una imagen -->
+    <p>Hola, soy M.Amin. <img src="../IMAGENES/WhatsApp Image 2026-11-01 at 00.28.11.jpeg" alt="M.Amin hechandose un selfie" width="200" height="200"></p>
+    <hr>
+    <form action="https://www.ejemplo.com/submit" method="post">
+        <!-- <form> ,me sirve para hacer un formulario -->
+            <!--action ,me sirve para indicar la URL a la que se enviarán los datos del formulario
+            <!method ,me sirve para indicar el método HTTP que se utilizará para enviar los datos del formulario (GET o POST)  -->
+        <label for="nombre">Nombre:</label>
+        <!-- <input type="text"> permite escribir texto en una sola línea -->
+        <input value="Default" type="text" id="nombre" name="nombre" placeholder="Nombre"><br><br>
+        <!-- <input> ,me sirve para insertar mucha imfo del usuario -->
+        <!-- <label> ,me sirve para insertar una etiqueta ,es como sout de java antes de meter texto desde teclado-->
+        <label for="Email">Email:</label>
+        <!-- <input type="email"> permite escribir una dirección de correo electrónico -->
+        <input value="default@gmail.com" type="email" id="email" name="email" placeholder="Email"><br><br>
+        <label for="password">Mensaje:</label>
+        <!-- <input type="password"> permite escribir texto ocultando los caracteres -->
+        <input value="defaultpassword" type="password" id="password" name="password" placeholder="Contraseña"><br><br>
+        <label for="File">Archivo:</label>
+        <!-- <input type="file"> permite seleccionar un archivo del dispositivo -->
+        <input value="defaultfile" type="file" id="File" name="File"><br><br>
+        <label for="Checkbox">Acepto los terminos y condiciones:</label>
+        <!-- <input type="checkbox"> permite marcar o desmarcar una opción -->
+        <input value="on" type="checkbox" id="Checkbox" name="Checkbox"><br><br>
+        <label for="Radio">Sexo:</label>
+        <!-- <input type="radio"> permite elegir una opción; al compartir name, solo se puede marcar una -->
+        <input type="radio" id="Radio" name="Radio" value="Hombre">Hombre
+        <input type="radio" id="Radio" name="Radio" value="Mujer">Mujer<br><br> 
+        <label for="Enviar">Dale al boton para enviar</label>
+        <!-- <input type="submit"> permite enviar el formulario -->
+        <input type="submit" id="Enviar" name="Enviar" value="Enviar" ><br><br>
+
+        <hr>
+        <label for="Textarea">Mensaje:</label>
+        <!-- <textarea> permite escribir texto en varias líneas -->
+        <textarea id="Textarea" name="Textarea" rows="4" cols="50" placeholder="Escribe tu mensaje aquí"></textarea><br><br>
+        <hr>
+        <button type="button" onclick="alert('¡Hola! Has hecho clic en el botón.')"><img src="../trimestre-html/semana-04/fotos/caballo.avif" alt="Caballo" width="100" height="100">Haz clic aquí</button>
+        <button type="submit">Enviar formulario</button>
+        <button type="reset">Restablecer formulario</button>    
+         </form>
+        <hr>
+        <!-- <ul> ,me sirve para hacer una lista desordenada -->
+        <ul>
+            <li>Elemento de lista 1</li>
+            <li>Elemento de lista 2</li>
+            <li>Elemento de lista 3</li>
+        </ul>
+        <!-- <ol> ,me sirve para hacer una lista ordenada -->
+        <ol>
+            <li>Elemento de lista ordenada 1</li>
+            <li>Elemento de lista ordenada 2</li>
+            <li>Elemento de lista ordenada 3</li>
+        </ol>
+        <!-- <ol type="A"> ,me sirve para hacer una lista ordenada con letras mayusculas -->
+        <ol type="A">
+            <li>Elemento de lista ordenada A</li>
+            <li>Elemento de lista ordenada B</li>
+            <li>Elemento de lista ordenada C</li>
+        </ol>
+        <ol>
+            <!-- <li value="3"> ,me sirve para hacer una lista ordenada con numeros descendentes -->
+            <li value="3">Elemento de lista ordenada 3
+                <ol type="a">
+                    <!-- <li> ,me sirve para hacer una lista ordenada dentro de otra lista ordenada -->
+                    <li>Elemento de lista ordenada 3.1</li>
+                    <li>Elemento de lista ordenada 3.2</li>
+                </ol>
+            </li>
+            
+            <li value="2">Elemento de lista ordenada 2</li>
+            <li value="1">Elemento de lista ordenada 1</li>
+
+        </ol>
+
+        <!-- Tabla para organizar productos y precios en filas y columnas.
+             border="1" muestra un borde; hoy se suele definir el borde con CSS. -->
+        <table border="1,5">
+            <!-- Primera fila: encabezados de las columnas. -->
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+            <!-- Cada fila siguiente contiene un producto y su precio. -->
+            <tr>
+                <td>Manzanas</td>
+                <td>2,50 €</td>
+            </tr>
+            <tr>
+                <td>Pan</td>
+                <td>1,20 €</td>
+            </tr>
+            <tr>
+                <td>Leche</td>
+                <td>0,95 €</td>
+            </tr>
+            <tr>
+                <td>Huevos</td>
+                <td>3,10 €</td>
+            </tr>
+            <!-- <tr> crea una fila, <th> una celda de encabezado y <td> una celda de datos. -->
+        </table>
+   
+</body>
+</html>

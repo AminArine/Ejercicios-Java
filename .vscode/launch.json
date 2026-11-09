@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "tarifaenvio",
+            "request": "launch",
+            "mainClass": "EjerciciosRepasoT2.tarifaenvio",
+            "projectName": "Ejercicios-Java_bfbc493a"
+        },
+        {
             "type": "jdk",
             "request": "launch",
             "name": "Launch Java App"
