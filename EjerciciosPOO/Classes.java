@@ -53,4 +53,4 @@ public static void main(String[] args) {
         // 9. Crea varios objetos Person y guárdalos en un ArrayList.
 
         // 10. Crea una clase Product y un método que aplique un descuento sobre su precio.
-}
+}}
