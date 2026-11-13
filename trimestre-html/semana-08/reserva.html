@@ -6,6 +6,56 @@
     <title>Formulario de registro completo</title>
 </head>
 <body>
-   
+    <form>
+        <!--Ejercicio 5 (reto) — Formulario de registro completo.
+        Crea registro.html con un formulario de registro de usuario que combine, agrupados en fieldset
+        con sentido: nombre de usuario (con minlength / maxlength ), correo ( required ), contraseña, fecha
+        de nacimiento, un select de país con al menos 5 opciones, un datalist para sugerir la ciudad, y
+        los tres botones ( submit , reset y uno de tipo button con el texto "Ver condiciones")-->
+
+        <fieldset>
+            <legend>Datos de acceso</legend>
+
+            <label for="usuario">Nombre de usuario (4-12 caracteres)</label>
+            <input type="text" id="usuario" name="usuario" required minlength="4" maxlength="12"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required><br><br>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required minlength="8"><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <label for="fechaNacimiento">Fecha de nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento"><br><br>
+
+            <label for="pais">País:</label>
+            <select id="pais" name="pais" required>
+                <option value="">Selecciona un país</option>
+                <option value="es">España</option>
+                <option value="mx">México</option>
+                <option value="ar">Argentina</option>
+                <option value="co">Colombia</option>
+                <option value="cl">Chile</option>
+            </select><br><br>
+
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" list="ciudades" placeholder="Escribe tu ciudad">
+            <datalist id="ciudades">
+                <option value="Madrid"></option>
+                <option value="Barcelona"></option>
+                <option value="Sevilla"></option>
+                <option value="Valencia"></option>
+                <option value="Bilbao"></option>
+            </datalist><br><br>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpiar</button>
+        <button type="button">Ver condiciones</button>
+    </form>
 </body>
 </html>
