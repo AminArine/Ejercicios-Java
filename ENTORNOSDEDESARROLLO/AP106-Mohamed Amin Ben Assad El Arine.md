@@ -1,5 +1,7 @@
  # AP106-Mohamed Amin Ben Assad El Arine
 Mohamed Amin Ben Assad El Arine
+**Módulo:** Entornos de Desarrollo  
+**Curso:** 1.º DAW
 ### Investigación comparativa: Java, PHP, Python y TypeScript
 ## 1. Del código fuente al ejecutable
 Cómo se transforma el código fuente de cada lenguaje hasta que puede ejecutarse.

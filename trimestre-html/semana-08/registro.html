@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de cita</title>
+</head>
+<body>
+    <form >
+    <!--Reserva de cita.-->
+        <label for="nombre">Nombre:</label>
+        <input value="Default" type="text" id="nombre" name="nombre" placeholder="Nombre"><br><br>
+        
+        <label>Franja horaria:</label><br><br>
+        <label for="franja1">09:00-10:00</label>
+        <input type="radio" id="franja1" name="franja" value="09:00-10:00"><br><br>
+
+        <label for="franja2">10:00-11:00</label>
+        <input type="radio" id="franja2" name="franja" value="10:00-11:00"><br><br>
+
+        <label for="franja3">17:00-18:00</label>
+        <input type="radio" id="franja3" name="franja" value="17:00-18:00"><br><br>
+
+        <label for="franja4">16:00-17:00</label>
+        <input type="radio" id="franja4" name="franja" value="16:00-17:00"><br><br>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha " value="fecha"><br><br>
+
+    <!-- Subida de archivo y valoración.-->
+        <hr>
+        <label for="foto">Sube tu foto</label>
+        <input type="file" id="foto" name="foto" accept="image/*"><br><br>
+        <label for="VALORAR LA ATENCION">valorar la atención recibida</label>
+        <input type="range" id="volumen" name="volumen" min="0" max="5" value="5">
+    <!--Mensaje y desplegable agrupado.-->
+        <hr>
+        <label for="mensaje">Tu mensaje</label><br>
+        <textarea id="mensaje" name="mensaje" rows="5" cols="40" placeholder="Escribe aquí..."></textarea><br><br>
+
+        <label for="hora">Franja horaria</label>
+        <select id="hora" name="hora">
+            <option value="">-- Selecciona una hora --</option>
+                <optgroup label="Mañana">
+                    <option value="09:00-10:00">09:00-10:00</option>
+                    <option value="10:00-11:00">10:00-11:00</option>
+                </optgroup>
+                <optgroup label="Tarde">
+                    <option value="16:00-17:00">16:00-17:00</option>
+                    <option value="17:00-18:00">17:00-18:00</option>
+                </optgroup>
+        </select>
+    <!--Validación nativa.-->
+        <hr>
+
+        <label for="usuario">Nombre de usuario (4-12 caracteres)</label>
+        <input type="text" id="usuario" name="usuario" required minlength="3" maxlength="12">
+
+        <label for="tel">Teléfono español</label>
+        <input type="tel" id="tel" name="tel" pattern="[0-9]{9}" title="9 dígitos, sin espacios">
+
+
+    </form>
+</body>
+</html>
